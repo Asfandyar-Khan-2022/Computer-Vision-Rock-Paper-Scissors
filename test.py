@@ -1,11 +1,11 @@
-import sched, time
-s = sched.scheduler(time.time, time.sleep)
-def do_something(sc): 
-    print("Doing stuff...")
-    # do your stuff
-    sc.enter(3, 1, do_something, (sc,))
+import random
 
-s.enter(3, 1, do_something, (s,))
-s.run()
+def get_computer_choice():
+    return random.choice(['Rock', 'Paper', 'Sissors'])
+testing = 0
+while 5 > testing:
+    print(get_computer_choice())
+    print(get_computer_choice())
+    print(get_computer_choice())
+    testing += 1
 
-print('test')
