@@ -1,11 +1,8 @@
-import random
+import time
+import cv2
+from keras.models import load_model
+import numpy as np
+from threading import Thread
+import random 
 
-def get_computer_choice():
-    return random.choice(['Rock', 'Paper', 'Sissors'])
-testing = 0
-while 5 > testing:
-    print(get_computer_choice())
-    print(get_computer_choice())
-    print(get_computer_choice())
-    testing += 1
-
+cap = cv2.VideoCapture(0)  
